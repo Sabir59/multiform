@@ -3,3 +3,14 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+.testimonial-slider .slick-track {
+  display: flex;
+  align-items: center;
+}
+._max_height {
+  max-height: 1200px !important;
+  transition: all 0.3s ease-in-out;
+
+  padding-bottom: 12px;
+}
