@@ -12,14 +12,78 @@
 </head>
 
 <body>
+    <!-- Mobile Header -->
+    <div class="min-h-screen w-screen bg-[#3873CC] text-white fixed left-0 top-0 z-50 mobile-menu -translate-x-full ease-in duration-300">
+        <img src="assets/images/close_big.png" alt="icon" class="mobile_icon_close absolute top-4 right-4 z-100">
+        <ul class="flex flex-col gap-3 p-3 mt-8">
+            <li>
+                <a href="#" class="capitalize">home</a>
+            </li>
+            <li class="relative">
+               <div class="flex items-center gap-2 mobile_droptoggler">
+                    <span href="#" class="capitalize">about us</span>
+                    <img src="assets/images/caret_down_w.png" alt="icon">
+                </div>
+                
+                    <ul class="mobile_dropdown hidden flex flex-col pl-1 gap-2 overflow-hidden">
+                        <li><a href="#" class="capitalize text-[14px]">Medical Billing & Coding</a></li>
+                        <li><a href="#" class="capitalize text-[14px]">RCM Services</a></li>
+                        <li><a href="#" class="capitalize text-[14px]">Credentialing</a></li>
+                    </ul>
+            </li>
+            <li class="relative">
+                <div class="flex items-center gap-2 mobile_droptoggler">
+                     <span href="#" class="capitalize">services</span>
+                     <img src="assets/images/caret_down_w.png" alt="icon">
+                 </div>
+                 
+                 <ul class="mobile_dropdown hidden flex flex-col pl-1 gap-2 overflow-hidden">
+                     <li><a href="#" class="capitalize text-[14px]">Medical Billing & Coding</a></li>
+                     <li><a href="#" class="capitalize text-[14px]">RCM Services</a></li>
+                     <li><a href="#" class="capitalize text-[14px]">Credentialing</a></li>
+                     <li><a href="#" class="capitalize text-[14px]">Practice Management</a></li>
+                     <li><a href="#" class="capitalize text-[14px]">AR Follow Up & Danial Management</a></li>
+                     <li><a href="#" class="capitalize text-[14px]">prior authorization</a></li>
+                     <li><a href="#" class="capitalize text-[14px]">scribing</a></li>
+                     <li><a href="#" class="capitalize text-[14px]">verification of benefits</a></li>
+                     <li><a href="#" class="capitalize text-[14px]">website development</a></li>
+                     <li><a href="#" class="capitalize text-[14px]">virtual assistant</a></li>
+                 </ul>
+             </li>
+            <li class="flex items-center gap-2">
+                <a href="#" class="capitalize">blogs</a>
+            </li>
+            <li class="flex items-center gap-2">
+                <a href="#" class="capitalize">FAQ's</a>
+            </li>
+            <li class="relative">
+                <div class="flex items-center gap-2 mobile_droptoggler">
+                     <span href="#" class="capitalize">contact us</span>
+                     <img src="assets/images/caret_down_w.png" alt="icon">
+                 </div>
+                 
+                     <ul class="mobile_dropdown hidden flex flex-col pl-1 gap-2 overflow-hidden">
+                         <li><a href="#" class="capitalize text-[14px]">Medical Billing & Coding</a></li>
+                         <li><a href="#" class="capitalize text-[14px]">RCM Services</a></li>
+                         <li><a href="#" class="capitalize text-[14px]">Credentialing</a></li>
+                     </ul>
+             </li>
+        </ul>
+    </div>
     <!-- Sub Header -->
     <div class="sub-header py-2 bg-[#3873CC] hidden md:block">
         <div
             class="2xl:max-w-[1284px] xl:max-w-[1152px] lg:max-w-[984px] md:max-w-[744px] sm:max-w-[100%] px-6 sm:px-3 mx-auto">
             <div class="flex justify-between items-center">
-                <div class="flex gap-6 text-white">
-                    <a href="tel:+92-345-5689">+92-345-5689</a>
-                    <a href="mailto:+92-345-5689">primedoc@info.com</a>
+                <div class="flex items-center gap-6 text-white">
+                    <a href="tel:+92-345-5689" class="flex items-center gap-2">
+                        <img src="assets/images/phone_outline.png" alt="icon">
+                        +92-345-5689
+                    </a>
+                    <a href="mailto:primedoc@info.com" class="flex items-center gap-2">
+                        <img src="assets/images/mail.png" alt="icon">
+                        primedoc@info.com
+                    </a>
                 </div>
                 <div class="flex gap-4">
                     <a href="#"><img src="assets/images/facebook.png" alt="facebook"></a>
@@ -36,18 +100,61 @@
             class="2xl:max-w-[1284px] xl:max-w-[1152px] lg:max-w-[984px] md:max-w-[744px] sm:max-w-[100%] px-6 sm:px-3 mx-auto">
             <div class="flex justify-between items-center">
                 <img src="assets/images/Logo_Header_White.png" alt="Logo">
-                <nav class="hidden xl:block">
-                    <ul class="flex gap-16">
+                <nav>
+                    <ul class="hidden xl:flex gap-16">
                         <li class="flex gap-2 items-center">
                             <a href="#" class="nav__link font-medium text-[#1F2937] capitalize">Home</a>
                         </li>
-                        <li class="flex gap-2 items-center">
+                        <li class="flex items-center gap-2 group relative">
                             <a href="#" class="nav__link font-medium text-[#1F2937] capitalize">about us</a>
                             <img src="assets/images/caret_down.png" alt="icon">
+                            <ul class="shadow-lg absolute w-max top-8 right-0 2xl:left-0 bg-transparent border-t border-[#3873CC] opacity-0 translate-y-4 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 before:block before:w-full before:absolute before:-top-8 before:h-10 before:bg-transparent">
+                                <li class="bg-white px-4 py-1 hover:bg-gray-100">
+                                    <a href="#" class="text-gray-700 text-[14px]">Mission / Values</a>
+                                </li>
+                                <li class="bg-white px-4 py-1 hover:bg-gray-100">
+                                    <a href="#" class="text-gray-700 text-[14px]">Core Values</a>
+                                </li>
+                                <li class="bg-white px-4 py-1 hover:bg-gray-100">
+                                    <a href="#" class="text-gray-700 text-[14px]">Company Profile</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="flex gap-2 items-center">
+                        <li class="flex items-center gap-2 group relative">
                             <a href="#" class="nav__link font-medium text-[#1F2937] capitalize">services</a>
                             <img src="assets/images/caret_down.png" alt="icon">
+                            <ul class="shadow-lg absolute w-max top-8 right-0 2xl:left-0 bg-transparent border-t border-[#3873CC] opacity-0 translate-y-4 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 before:block before:w-full before:absolute before:-top-8 before:h-10 before:bg-transparent">
+                                <li class="bg-white px-4 py-1 hover:bg-gray-100">
+                                    <a href="./servicepage.html" class="text-gray-700 text-[14px]">Medical Billing & Coding</a>
+                                </li>
+                                <li class="bg-white px-4 py-1 hover:bg-gray-100">
+                                    <a href="#" class="text-gray-700 text-[14px]">Revenue Cycle Management</a>
+                                </li>
+                                <li class="bg-white px-4 py-1 hover:bg-gray-100">
+                                    <a href="#" class="text-gray-700 text-[14px]">Credentialing</a>
+                                </li>
+                                <li class="bg-white px-4 py-1 hover:bg-gray-100">
+                                    <a href="#" class="text-gray-700 text-[14px]">Practice Management</a>
+                                </li>
+                                <li class="bg-white px-4 py-1 hover:bg-gray-100">
+                                    <a href="#" class="text-gray-700 text-[14px]">AR Follow Up & Danial Management</a>
+                                </li>
+                                <li class="bg-white px-4 py-1 hover:bg-gray-100">
+                                    <a href="#" class="text-gray-700 text-[14px]">Prior Authorization</a>
+                                </li>
+                                <li class="bg-white px-4 py-1 hover:bg-gray-100">
+                                    <a href="#" class="text-gray-700 text-[14px]">Scribing</a>
+                                </li>
+                                <li class="bg-white px-4 py-1 hover:bg-gray-100">
+                                    <a href="#" class="text-gray-700 text-[14px]">Verification Of Benefits</a>
+                                </li>
+                                <li class="bg-white px-4 py-1 hover:bg-gray-100">
+                                    <a href="#" class="text-gray-700 text-[14px]">Website Development</a>
+                                </li>
+                                <li class="bg-white px-4 py-1 hover:bg-gray-100">
+                                    <a href="#" class="text-gray-700 text-[14px]">Virtual Assistant</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="flex gap-2 items-center">
                             <a href="#" class="nav__link font-medium text-[#1F2937] capitalize">blogs</a>
@@ -55,11 +162,23 @@
                         <li class="flex gap-2 items-center">
                             <a href="#" class="nav__link font-medium text-[#1F2937] capitalize">FAQ's</a>
                         </li>
-                        <li class="flex gap-2 items-center">
+                        <li class="flex items-center gap-2 group relative">
                             <a href="#" class="nav__link font-medium text-[#1F2937] capitalize">contact us</a>
                             <img src="assets/images/caret_down.png" alt="icon">
+                            <ul class="shadow-lg absolute w-max top-8 right-0 2xl:left-0 bg-transparent border-t border-[#3873CC] opacity-0 translate-y-4 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-300 before:block before:w-full before:absolute before:-top-8 before:h-10 before:bg-transparent">
+                                <li class="bg-white px-4 py-1 hover:bg-gray-100">
+                                    <a href="#" class="text-gray-700 text-[14px]">Connect With Sales</a>
+                                </li>
+                                <li class="bg-white px-4 py-1 hover:bg-gray-100">
+                                    <a href="#" class="text-gray-700 text-[14px]">Book A Demo</a>
+                                </li>
+                                <li class="bg-white px-4 py-1 hover:bg-gray-100">
+                                    <a href="#" class="text-gray-700 text-[14px]">Request A Free Practice Analysis</a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
+                    <img src="assets/images/menu_alt.svg" alt="icon" class="block xl:hidden icon_menu">
                 </nav>
             </div>
         </div>
@@ -68,19 +187,22 @@
     <section class="hero bg-[#3873CC] text-white">
         <div
             class="2xl:max-w-[1284px] xl:max-w-[1152px] lg:max-w-[984px] md:max-w-[744px] sm:max-w-[100%] px-6 sm:px-3 mx-auto">
-            <div class="grid grid-cols-1 xl:grid-cols-2 gap-2">
+            <div class="flex flex-col lg:flex-row gap-2">
                 <!-- Column 1 -->
-                <div class="py-10 md:py-16">
-                    <h1 class="text-[32px] md:text-[48px] font-bold capitalize">
+                <div class="py-8 md:py-10 max-w-[558px] hero-maxw">
+                    <h1 class="text-[32px] sm:text-[48px] font-bold capitalize hero-heading">
                         get high quality services with Prime Doc billing
                     </h1>
-                    <div class="flex flex-col md:flex-row gap-6 mt-16">
-                        <button class="py-5 px-16 capitalize bg-[#00D1B2] text-[18px] font-semibold rounded">
+                    <div class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16">
+                        <button class="hero-btn py-4 px-8 capitalize bg-[#00D1B2] text-[18px] font-medium rounded">
                             book a demo
                         </button>
-                        <button class="py-5 px-16 capitalize border text-[18px] font-semibold rounded">
+                        <button class="hero-btn py-4 px-8 capitalize border text-[18px] font-medium rounded">
                             request a free analysis
                         </button>
+                        <!-- <button class="py-5 px-16 capitalize border text-[18px] font-semibold rounded">
+                            request a free analysis
+                        </button> -->
                     </div>
                 </div>
 
@@ -618,8 +740,8 @@
                   in a cost manner.
                 </li>
               </ul>
-              <div class="p-8 bg-[url(/assets/images/form_bg.png)] w-full max-w-[618px]">
-                <form action="#" class="bg-white p-8">
+              <div class="p-4 md:p-8 bg-[url(/assets/images/form_bg.png)] w-full max-w-[618px]">
+                <form action="#" class="bg-white p-4 md:p-8">
                     <div class="flex flex-col gap-6">
                         <h4 class="text-[#1E293B] text-[24px] font-bold leading-[28px] capitalise">Book A Demo</h4>
                        <div class="flex flex-col gap-6">
@@ -688,12 +810,12 @@
             <li
               class="capitalize text-[#3F3F46] font-medium text-[20px] px-4 pt-4 border-t overflow-hidden accordion__item"
             >
-              <div class="flex justify-between cursor-pointer">
+              <div class="flex justify-between cursor-pointer pb-4">
                 <span>our pricing plan</span>
                 <img src="assets/images/accordion_expanded.png" alt="icon" />
               </div>
               <p
-                class="text-[#52525B] font-light text-[16px] mt-3 leading-[28px] max-h-[0] _max_height"
+                class="text-[#52525B] font-light text-[16px] mt-3 leading-[28px]"
               >
                 Prime Doc Billing adopts a dynamic and exible approach for it's clients to cater their
                 needs in a cost ective manner. Our variety of business model's help the client's to
@@ -706,11 +828,11 @@
             <li
               class="capitalize text-[#3F3F46] font-medium text-[20px] px-4 pt-4 border-t overflow-hidden accordion__item"
             >
-              <div class="flex justify-between cursor-pointer">
+              <div class="flex justify-between cursor-pointer pb-4">
                 <span>our pricing plan</span>
                 <img src="assets/images/accordion_plus.png" alt="icon" />
               </div>
-              <p class="text-[#52525B] font-light text-[16px] mt-3 leading-[28px] max-h-[0]">
+              <p class="text-[#52525B] font-light text-[16px] mt-3 leading-[28px] hidden">
                 Prime Doc Billing adopts a dynamic and exible approach for it's clients to cater their
                 needs in a cost ective manner. Our variety of business model's help the client's to
                 avail top quality services according to their requirements and needs.Prime Doc Billing
@@ -722,11 +844,11 @@
             <li
               class="capitalize text-[#3F3F46] font-medium text-[20px] px-4 pt-4 border-t overflow-hidden accordion__item"
             >
-              <div class="flex justify-between cursor-pointer">
+              <div class="flex justify-between cursor-pointer pb-4">
                 <span>our pricing plan</span>
                 <img src="assets/images/accordion_plus.png" alt="icon" />
               </div>
-              <p class="text-[#52525B] font-light text-[16px] mt-3 leading-[28px] max-h-[0]">
+              <p class="text-[#52525B] font-light text-[16px] mt-3 leading-[28px] hidden">
                 Prime Doc Billing adopts a dynamic and exible approach for it's clients to cater their
                 needs in a cost ective manner. Our variety of business model's help the client's to
                 avail top quality services according to their requirements and needs.Prime Doc Billing
@@ -738,11 +860,11 @@
             <li
               class="capitalize text-[#3F3F46] font-medium text-[20px] px-4 pt-4 border-t overflow-hidden accordion__item"
             >
-              <div class="flex justify-between cursor-pointer">
+              <div class="flex justify-between cursor-pointer pb-4">
                 <span>our pricing plan</span>
                 <img src="assets/images/accordion_plus.png" alt="icon" />
               </div>
-              <p class="text-[#52525B] font-light text-[16px] mt-3 leading-[28px] max-h-[0]">
+              <p class="text-[#52525B] font-light text-[16px] mt-3 leading-[28px] hidden">
                 Prime Doc Billing adopts a dynamic and exible approach for it's clients to cater their
                 needs in a cost ective manner. Our variety of business model's help the client's to
                 avail top quality services according to their requirements and needs.Prime Doc Billing
