@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- Tailwind CSS -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="css/plugins/slick.1.8.1.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css">
@@ -234,10 +237,10 @@
             <div class="flex flex-col lg:flex-row gap-2">
                 <!-- Column 1 -->
                 <div class="py-8 md:py-10 max-w-[558px] hero-maxw">
-                    <h1 class="text-[32px] sm:text-[48px] font-bold capitalize hero-heading">
+                    <h1 class="text-[32px] sm:text-[48px] font-bold capitalize hero-heading" data-aos="fade-up">
                         get high quality services with Prime Doc billing
                     </h1>
-                    <div class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16">
+                    <div class="flex flex-col md:flex-row gap-6 mt-8 md:mt-16" data-aos="fade-up">
                         <button
                             class="hover:bg-transparent hover:border-white border border-[#00D1B2] transition duration-300 ease-in hero-btn py-4 px-8 capitalize bg-[#00D1B2] text-[18px] font-medium rounded demo-form-toggler"
                             data-form="demo">
@@ -252,10 +255,11 @@
                 </div>
 
                 <!-- Column 2 -->
-                <div class="self-end">
+                <div class="self-end over" data-aos="fade-up">
                     <img src="assets/images/Hero_Photo.png" alt="Photo">
                 </div>
             </div>
+        </div>
 
     </section>
     <!-- Testimonials -->
@@ -961,7 +965,7 @@
         </div>
     </section>
     <!-- Footer -->
-    <footer class="bg-[#3873CC] py-16">
+    <footer class="bg-[#3873CC] py-8">
         <div
             class="2xl:max-w-[1536px] xl:max-w-[1152px] lg:max-w-[984px] md:max-w-[744px] sm:max-w-[100%] px-6 sm:px-3 mx-auto">
             <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 sm:gap-16">
@@ -983,6 +987,7 @@
                 </div>
                 <!-- Column -->
                 <div class="flex flex-col gap-5">
+                    <div class="mb-0 md:mb-5"></div>
                     <ul class="flex flex-col gap-2">
                         <li><a href="#" class="text-[#F4F4F5] text-[14px] capitalize">prior authorization</a></li>
                         <li><a href="#" class="text-[#F4F4F5] text-[14px] capitalize">scribing</a></li>
@@ -1013,9 +1018,9 @@
                     <ul class="flex flex-col gap-3">
                         <li>
                             <a href="#" class="text-[#F4F4F5] text-[14px] capitalize flex gap-2 items-start">
-                                <img src="assets/images/location_outline.png" alt="icon">
+                                <img src="assets/images/mail.png" alt="icon">
                                 <span>
-                                    324 E 9th St, Brooklyn, NY 11218, United States
+                                    info@primedocbilling.com
                                 </span>
                             </a>
                         </li>
@@ -1029,17 +1034,17 @@
                         </li>
                         <li>
                             <a href="#" class="text-[#F4F4F5] text-[14px] capitalize flex gap-2 items-start">
-                                <img src="assets/images/mail.png" alt="icon">
+                                <img src="assets/images/message.png" alt="icon">
                                 <span>
-                                    info@primedocbilling.com
+                                    Chat With Us
                                 </span>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="text-[#F4F4F5] text-[14px] capitalize flex gap-2 items-start">
-                                <img src="assets/images/message.png" alt="icon">
+                                <img src="assets/images/location_outline.png" alt="icon">
                                 <span>
-                                    Chat With Us
+                                    324 E 9th St, Brooklyn, NY 11218, United States
                                 </span>
                             </a>
                         </li>
@@ -1239,9 +1244,12 @@
                 analysis</button>
         </form>
     </div>
+
     <script src="js/vendors/jquery-3.7.0.min.js"></script>
     <script src="js/plugins/slick.1.8.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="js/main.js"></script>
+
 </body>
 
 </html>

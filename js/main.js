@@ -88,4 +88,5 @@ $(document).ready(function () {
       $(".demo-form").addClass("translate-y-8 opacity-0");
     }
   });
+  AOS.init();
 });
