@@ -16,21 +16,6 @@ $(document).ready(function () {
   });
   // Slick Slider Ends
 
-  // Accordion Starts
-  // $(".accordion__item").each(function () {
-  //   $(this).click(function () {
-  //     var currentP = $(this).find("p");
-  //     var isOpen = currentP.hasClass("_max_height");
-  //     $(".accordion__item p").removeClass("_max_height");
-  //     $(".accordion__item img").attr("src", "assets/images/accordion_plus.png");
-  //     if (!isOpen) {
-  //       currentP.addClass("_max_height");
-  //       $(this).find("img").attr("src", "assets/images/accordion_expanded.png");
-  //     }
-  //   });
-  // });
-  // Accordion Ends
-
   // Mobile Navigation
   $(".icon_menu").click(function () {
     $(".mobile-menu").addClass("translate-x-0");
@@ -40,7 +25,9 @@ $(document).ready(function () {
   });
 
   $(".mobile_droptoggler").click(function () {
-    $(".mobile_dropdown").not($(this).next(".mobile_dropdown")).slideUp();
+    $(".mobile_dropdown")
+      .not($(this).next(".mobile_dropdown"))
+      .slideUp();
     $(this).next(".mobile_dropdown").slideToggle();
   });
 
@@ -58,6 +45,47 @@ $(document).ready(function () {
 
     // Slide up all other p elements and reset their image sources
     $(this).siblings().find("p").slideUp();
-    $(this).siblings().find("img").attr("src", "assets/images/accordion_plus.png");
+    $(this)
+      .siblings()
+      .find("img")
+      .attr("src", "assets/images/accordion_plus.png");
+  });
+
+  $(".search_icon_toggler").click(function () {
+    $(".search-form-container").removeClass("invisible opacity-0");
+    $(".searchform").removeClass("invisible translate-y-4 opacity-0");
+    $(".demo-form").addClass("translate-y-8 opacity-0");
+  });
+
+  $(".close-search").click(function (event) {
+    $(".search-form-container").addClass("invisible opacity-0");
+    $(".searchform").addClass("invisible translate-y-4 opacity-0");
+    $(".demo-form").addClass("translate-y-8 opacity-0");
+  });
+
+  $(".close-icon-form").click(function (event) {
+    $(".demo-form-container").addClass("invisible");
+    $(".practice-form-container").addClass("invisible");
+    $(".demo-form").addClass("translate-y-8 opacity-0");
+  });
+
+  $(".demo-form-toggler").click(function (event) {
+    $(".demo-form-container").removeClass("invisible");
+    $(".demo-form").removeClass("translate-y-8 opacity-0");
+  });
+
+  $(".pr-form-toggler").click(function (event) {
+    $(".practice-form-container").removeClass("invisible");
+    $(".demo-form").removeClass("translate-y-8 opacity-0");
+  });
+
+  $(
+    ".demo-form-container, .search-form-container, .practice-form-container"
+  ).click(function (event) {
+    if (event.target === this) {
+      $(this).addClass("invisible");
+      $(".searchform").addClass("invisible translate-y-4 opacity-0");
+      $(".demo-form").addClass("translate-y-8 opacity-0");
+    }
   });
 });
