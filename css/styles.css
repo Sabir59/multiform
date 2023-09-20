@@ -53,4 +53,18 @@ input[type="date"] {
   width: 100%;
   color: #acacac;
 }
- 
+.demo-form,
+.demo-form-container {
+  scrollbar-width: none;
+  -webkit-scrollbar-width: none;
+}
+
+/* Hide the scrollbar thumb and track */
+.demo-form::-webkit-scrollbar,
+.demo-form-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.demo-form {
+  scrollbar-width: none;
+}
