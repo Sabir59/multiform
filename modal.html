@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <!-- Button trigger modal -->
@@ -30,7 +32,7 @@
     >
       <div
         data-te-modal-dialog-ref
-        class="pointer-events-none relative w-auto translate-y-[-50px] opacity-0 transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px]"
+        class="pointer-events-none relative w-auto translate-y-[-50px] transition-all duration-300 ease-in-out min-[576px]:mx-auto min-[576px]:mt-7 min-[576px]:max-w-[500px] min-[768px]:max-w-[540px]"
       >
         <div
           class="min-[576px]:shadow-[0_0.5rem_1rem_rgba(#000, 0.15)] pointer-events-auto relative flex w-full flex-col rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600"
@@ -39,10 +41,8 @@
             class="py-8 flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50"
           >
             <!--Modal title-->
-            <h4
-              class="text-[#1E293B] text-[24px] font-bold leading-[28px] capitalise"
-            >
-              Book A Demo
+            <h4 class="text-[#1E293B] text-[24px] font-bold leading-[28px] capitalize">
+              request a free practice analysis
             </h4>
             <!--Close button-->
             <button
@@ -59,118 +59,154 @@
                 stroke="currentColor"
                 class="h-6 w-6"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
 
           <!--Modal body-->
-          <div class="relative flex-auto p-4 mx-auto" data-te-modal-body-ref>
-            <div
-              class="block max-w-md rounded-lg bg-white p-2 dark:bg-neutral-700"
-            >
-              <form>
-                <div class="flex flex-col gap-4">
-                  <div class="sm:grid grid-cols-2 gap-4">
-                    <div class="flex flex-col gap-1">
-                      <label for="first_name">First Name</label>
-                      <input
-                        type="text"
-                        placeholder="First Name"
-                        class="border border-gray-300 px-3 py-1 rounded-sm focus:outline-none w-full"
-                      />
-                    </div>
-                    <div class="flex flex-col gap-1">
-                      <label for="first_name">First Name</label>
-                      <input
-                        type="text"
-                        placeholder="First Name"
-                        class="border border-gray-300 px-3 py-1 rounded-sm focus:outline-none w-full"
-                      />
-                    </div>
+          <div class="relative flex-auto p-8 mx-auto w-full" data-te-modal-body-ref>
+            <form action="#">
+              <div class="flex flex-col gap-6">
+                <div class="flex gap-6 flex-col md:flex-row w-full">
+                  <div class="flex flex-col gap-1 w-full">
+                    <label for="practice_name" class="text-[#3F3F46] capitalise text-sm"
+                      >Practice Name
+                      <span class="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Practice Name"
+                      name="practice_name"
+                      class="w-full border-b border-gray-300 py-2 pr-4 focus:outline-none text-sm focus:border-[#20C197] placeholder:font-light"
+                      id="practice_name"
+                    />
                   </div>
-                  <div class="sm:grid grid-cols-2 gap-4">
-                    <div class="flex flex-col gap-1">
-                      <label for="first_name">First Name</label>
-                      <input
-                        type="text"
-                        placeholder="First Name"
-                        class="border border-gray-300 px-3 py-1 rounded-sm focus:outline-none w-full"
-                      />
-                    </div>
-                    <div class="flex flex-col gap-1">
-                      <label for="first_name">First Name</label>
-                      <input
-                        type="text"
-                        placeholder="First Name"
-                        class="border border-gray-300 px-3 py-1 rounded-sm focus:outline-none w-full"
-                      />
-                    </div>
+                  <div class="flex flex-col gap-1 w-full">
+                    <label for="cp_name" class="text-[#3F3F46] capitalise text-sm"
+                      >Concerned Person Name
+                      <span class="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Concerned Person Name"
+                      name="cp_name"
+                      class="w-full border-b border-gray-300 py-2 pr-4 focus:outline-none text-sm focus:border-[#20C197] placeholder:font-light"
+                      id="cp_name"
+                    />
                   </div>
-                  <div class="sm:grid grid-cols-2 gap-4">
-                    <div class="flex flex-col gap-1">
-                      <label for="first_name">First Name</label>
-                      <input
-                        type="text"
-                        placeholder="First Name"
-                        class="border border-gray-300 px-3 py-1 rounded-sm focus:outline-none w-full"
-                      />
-                    </div>
-                    <div class="flex flex-col gap-1">
-                      <label for="first_name">First Name</label>
-                      <input
-                        type="text"
-                        placeholder="First Name"
-                        class="border border-gray-300 px-3 py-1 rounded-sm focus:outline-none w-full"
-                      />
-                    </div>
+                </div>
+                <div class="flex gap-6 flex-col md:flex-row w-full">
+                  <div class="flex flex-col gap-1 w-full">
+                    <label for="pcompany_name" class="text-[#3F3F46] capitalise text-sm"
+                      >Practice / Company Name
+                      <span class="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Company Name"
+                      name="pcompany_name"
+                      class="w-full border-b border-gray-300 py-2 pr-4 focus:outline-none text-sm focus:border-[#20C197] placeholder:font-light"
+                      id="pcompany_name"
+                    />
                   </div>
-
+                  <div class="flex flex-col gap-1 w-full">
+                    <label for="email" class="text-[#3F3F46] capitalise text-sm"
+                      >Email
+                      <span class="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Email"
+                      class="w-full border-b border-gray-300 py-2 pr-4 focus:outline-none text-sm focus:border-[#20C197] placeholder:font-light"
+                      id="email"
+                    />
+                  </div>
+                </div>
+                <div class="flex gap-6 flex-col md:flex-row w-full">
+                  <div class="flex flex-col gap-1 w-full">
+                    <label for="speciality" class="text-[#3F3F46] capitalise text-sm"
+                      >Speciality
+                      <span class="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Speciality"
+                      name="speciality"
+                      class="w-full border-b border-gray-300 py-2 pr-4 focus:outline-none text-sm focus:border-[#20C197] placeholder:font-light"
+                      id="speciality"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-1 w-full">
+                    <label for="providers" class="text-[#3F3F46] capitalise text-sm"
+                      >Numbers Of Providers
+                      <span class="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Numbers Of Providers"
+                      class="w-full border-b border-gray-300 py-2 pr-4 focus:outline-none text-sm focus:border-[#20C197] placeholder:font-light"
+                      id="providers"
+                    />
+                  </div>
+                </div>
+                <div class="flex gap-6 flex-col md:flex-row w-full">
+                  <div class="flex flex-col gap-1 w-full">
+                    <label for="phone_number" class="text-[#3F3F46] capitalise text-sm"
+                      >Phone Number
+                      <span class="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Phone Number"
+                      class="w-full border-b border-gray-300 py-2 pr-4 focus:outline-none text-sm focus:border-[#20C197] placeholder:font-light"
+                      id="phone_number"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-1 w-full">
+                    <label for="date-time" class="text-[#3F3F46] capitalise text-sm"
+                      >Schedule
+                      <span class="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="date"
+                      placeholder="Schedule"
+                      class="w-full border-b border-gray-300 py-2 pr-4 focus:outline-none text-sm focus:border-[#20C197] placeholder:font-light"
+                      id="date-time"
+                    />
+                  </div>
+                </div>
+                <div class="flex gap-1 flex-col">
+                  <label for="ehr" class="text-[#3F3F46] capitalise text-sm"
+                    >Current EHR
+                    <span class="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Current EHR"
+                    class="w-full border-b border-gray-300 py-2 pr-4 focus:outline-none text-sm focus:border-[#20C197] placeholder:font-light"
+                    id="ehr"
+                  />
+                </div>
+                <div class="flex flex-col gap-1 w-full">
                   <textarea
-                    name=""
-                    id=""
-                    cols="30"
+                    name="message"
+                    id="message"
+                    cols="2"
                     rows="5"
-                    class="border border-gray-300 focus:outline-none p-2 rounded-sm mt-3"
-                    placeholder="Message (optional)"
+                    placeholder="Message(optional)"
+                    class="w-full border-b border-gray-300 py-2 pr-4 focus:outline-none text-sm focus:border-[#20C197] placeholder:font-lighter"
                   ></textarea>
                 </div>
-
-                <button
-                  class="mt-6 inline-block rounded bg-teal-500 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-                >
-                  Submit
-                </button>
-              </form>
-            </div>
+              </div>
+              <button
+                type="submit"
+                class="bg-[#20C197] rounded-sm text-white capitalize font-medium mt-8 px-6 py-2 shadow-lg hover:shadow-none transition duration-300"
+              >
+                submit
+              </button>
+            </form>
           </div>
-
-          <!--Modal footer-->
-          <!-- <div
-            class="flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50"
-          >
-            <button
-              type="button"
-              class="inline-block rounded bg-primary-100 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-primary-700 transition duration-150 ease-in-out hover:bg-primary-accent-100 focus:bg-primary-accent-100 focus:outline-none focus:ring-0 active:bg-primary-accent-200"
-              data-te-modal-dismiss
-              data-te-ripple-init
-              data-te-ripple-color="light"
-            >
-              Close
-            </button>
-            <button
-              type="button"
-              class="ml-1 inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-              data-te-ripple-init
-              data-te-ripple-color="light"
-            >
-              Save changes
-            </button>
-          </div> -->
         </div>
       </div>
     </div>
