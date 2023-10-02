@@ -1,4 +1,9 @@
 $(document).ready(function () {
+  //   Loader Removal
+  // setTimeout(() => {
+  $(".loader-container").fadeOut("slow", function () {
+    $(this).remove();
+  });
   // Slick Slider Starts
   $(".testimonial-slider").slick({
     infinite: true,
@@ -93,6 +98,4 @@ $(document).ready(function () {
     duration: 800,
     offset: 60,
   });
-  // Modal Initialization
-  initTE({ Modal, Ripple });
 });

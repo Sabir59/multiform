@@ -15,8 +15,6 @@ body {
   padding-bottom: 12px;
 }
 @media only screen and (min-width: 1024px) and (max-width: 1260px) {
-  /* Your CSS rules for this screen size range here */
-  /* For example: */
   .hero-heading {
     font-size: clamp(2rem, calc(-2.34rem + 6.78vw), 3rem) !important;
   }
@@ -60,7 +58,7 @@ input[type="date"] {
   min-height: 340px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
-.flip-card__photo{
+.flip-card__photo {
   height: 170px;
   object-position: top;
 }
@@ -81,7 +79,8 @@ input[type="date"] {
 }
 
 /* Position the front and back side */
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -100,3 +99,248 @@ input[type="date"] {
   color: white;
   transform: rotateY(180deg);
 }
+
+.hero {
+  background: -moz-linear-gradient(
+    45deg,
+    #3c72c8 0%,
+    #4d6db4 29%,
+    #3c72c8 66%,
+    #4270c0 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    #3c72c8 0%,
+    #4d6db4 29%,
+    #3c72c8 66%,
+    #4270c0 100%
+  );
+  background: linear-gradient(
+    45deg,
+    #3c72c8 0%,
+    #4d6db4 29%,
+    #3c72c8 66%,
+    #4270c0 100%
+  );
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+  /*min-height: calc(100vh - 2rem);*/
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-evenly;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero::before,
+.hero::after {
+  content: "";
+  width: 70vmax;
+  height: 70vmax;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.07);
+  left: -20vmin;
+  top: -20vmin;
+  animation: morph 15s linear infinite alternate,
+    spin 20s linear infinite;
+  z-index: 1;
+  will-change: border-radius, transform;
+  transform-origin: 55% 55%;
+  pointer-events: none;
+}
+
+.hero::after {
+  width: 70vmin;
+  height: 70vmin;
+  left: auto;
+  right: -10vmin;
+  top: auto;
+  bottom: 0;
+  animation: morph 10s linear infinite alternate,
+    spin 26s linear infinite reverse;
+  transform-origin: 20% 20%;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
+  }
+  100% {
+    border-radius: 40% 60%;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+.st0 {
+  display: none;
+}
+.st1 {
+  display: inline;
+}
+.st2 {
+  opacity: 0.29;
+}
+.st3 {
+  fill: #ffffff;
+}
+.st4 {
+  clip-path: url(#SVGID_2_);
+  fill: #ffffff;
+}
+.st5 {
+  clip-path: url(#SVGID_4_);
+}
+.st6 {
+  clip-path: url(#SVGID_6_);
+}
+.st7 {
+  clip-path: url(#SVGID_8_);
+}
+.st8 {
+  clip-path: url(#SVGID_10_);
+}
+.st9 {
+  fill: none;
+}
+.st10 {
+  clip-path: url(#SVGID_12_);
+}
+.st11 {
+  opacity: 0.7;
+}
+.st12 {
+  clip-path: url(#SVGID_14_);
+}
+.st13 {
+  opacity: 0.2;
+}
+.st14 {
+  clip-path: url(#SVGID_16_);
+}
+.st15 {
+  opacity: 0.3;
+  fill: #ffffff;
+  enable-background: new;
+}
+
+/* Loader */
+.loader-container {
+  z-index: 100;
+  top: 0;
+}
+.loader {
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  color: #fff;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border-radius: 50%;
+  transform: rotateX(70deg);
+  animation: 1s spin linear infinite;
+}
+.loader:after {
+  color: #00D1B2;
+  transform: rotateY(70deg);
+  animation-delay: 0.4s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: 0.2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: 0.2em 0.2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 0.2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -0.2em 0.2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -0.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -0.2em -0.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -0.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: 0.2em -0.2em 0 0 currentcolor;
+  }
+}
+/* Loader Ends */
