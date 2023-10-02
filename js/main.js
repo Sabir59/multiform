@@ -7,7 +7,7 @@ $(document).ready(function () {
   // Slick Slider Starts
   $(".testimonial-slider").slick({
     infinite: true,
-    speed: 6000,
+    speed: 5000,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
