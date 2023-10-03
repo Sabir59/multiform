@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="bgWave waveOne"></div>
+      <div class="bgWave waveTwo"></div>
+    </div>
+  </body>
+</html>
+<style>
+  body {
+    background-image: -webkit-linear-gradient(left, #3873CC 0%, #3873CC 100%);
+    background-image: linear-gradient(to right, #3873CC 0%, #3873CC 100%);
+    witdh: 100%;
+  }
+  .wrap {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 120px;
+  }
+  .bgWave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat;
+    background-position: left bottom;
+    transform-origin: left bottom;
+  }
+  .waveOne {
+    background-size: 50% 120px;
+    background-image: url(https://upload.cc/i1/2020/05/14/A2kBfn.png);
+    animation: wave 12s linear infinite;
+  }
+  .waveTwo {
+    background-size: 50% 120px;
+    background-image: url(https://upload.cc/i1/2020/05/14/A2kBfn.png);
+    animation: wave-reverse 6s linear infinite;
+    right: 0;
+    left: auto;
+  }
+  @keyframes wave {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-25%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  @keyframes wave-reverse {
+    0% {
+      transform: translateX(0) scaleY(1);
+    }
+    50% {
+      transform: translateX(25%) scaleY(0.55);
+    }
+    100% {
+      transform: translateX(50%) scaleY(1);
+    }
+  }
+</style>
